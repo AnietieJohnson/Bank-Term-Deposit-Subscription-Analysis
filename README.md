@@ -36,7 +36,7 @@ This column chart displays the count of subscribers based on their default statu
 This measure calculates the average age of customers who have subscribed to a term deposit,  Using the aggregate function **Average**
 > Average age of Depositors = AVERAGE('bank-full'[Age])
 ### 2. Conditional Column: Age Band
-A condition column named "Age Band" is created based on the age of depositors, categorizing them as follows:
+Using power query a conditional column named "Age Band" is created based on the age of depositors, categorizing them as follows:
 'Young' for ages below 30
 'Mid-aged' for ages between 30 and 50
 'Old' for ages above 50
