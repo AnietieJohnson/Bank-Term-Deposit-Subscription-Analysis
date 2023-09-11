@@ -31,21 +31,25 @@ This column chart displays the count of subscribers based on their default statu
 
 ## Dashboard Content 2
 ![](https://github.com/AnietieJohnson/Bank-Term-Deposit-Subscription-Analysis/blob/main/Task%204.png)
-## Measures and New Column Creation
+## Measures and Conditional Column Creation
 ### 1. Measure: Average Age of Depositors
 This measure calculates the average age of customers who have subscribed to a term deposit,  Using the aggregate function **Average**
 > Average age of Depositors = AVERAGE('bank-full'[Age])
-### 2. New Column: Age Band
-A new column named "Age Band" is created based on the age of depositors, categorizing them as follows:
+### 2. Conditional Column: Age Band
+A condition column named "Age Band" is created based on the age of depositors, categorizing them as follows:
 'Young' for ages below 30
 'Mid-aged' for ages between 30 and 50
 'Old' for ages above 50
+![](https://github.com/AnietieJohnson/Bank-Term-Deposit-Subscription-Analysis/blob/main/New%20Column.png)
 ### 3. Measure: Total Balance for Job (Technician) and Marital (Single and Married)
-This measure calculates the total balance for depositors with the following characteristics:
-Job: Technician
-Marital Status: Single and Married
+This measure calculates the total balance for depositors with the following characteristics, using the **Calculate function_**
+- Job: Technician, 
+>Total Balance for Technicians = CALCULATE(SUM('bank-full'[Balance]),FILTER('bank-full','bank-full'[Job] = "Technician")) 
+- Marital Status: Single and then for married.
+>Total Balance for Single = CALCULATE(SUM('bank-full'[Balance]), FILTER('bank-full','bank-full'[Marital] ="Single"))
 ### 4. Measure: Number of Depositors on Loan
-This measure counts the number of depositors who have loans.
+This measure counts the number of depositors who have loans,Using the aggregate function **Count** 
+> Count of Depositors on Loan = CALCULATE(COUNT('bank-full'[Loan]), FILTER('bank-full','bank-full'[Loan] = "Yes"))
 
 ## Conclusion
-This Power BI dashboard offers valuable insights into the bank term deposit subscription dataset, enabling users to analyze the average age of depositors, subscription counts, loan counts, average duration, and subscriber demographics. It allows us to calculate total balances for specific job and marital status combinations, and determine the number of depositors with loans. These tools enhance your ability to understand customer demographics and financial profiles, ultimately supporting data-driven decision-making and marketing strategies.
+This Power BI dashboard offers valuable insights into the bank term deposit subscription dataset, enabling us to analyze the average age of depositors, subscription counts, loan counts, average duration, and subscriber demographics. The second dashboard allows us to calculate total balances for specific job and marital status combinations, and determine the number of depositors with loans. These tools enhances ability to understand customer demographics and financial profiles, ultimately supporting data-driven decision-making and marketing strategies.
