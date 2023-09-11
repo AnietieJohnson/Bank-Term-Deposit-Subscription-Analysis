@@ -1,6 +1,6 @@
 # Bank-Term-Deposit-Subscription-Analysis
 ## Introduction
-This documentation provides an overview of a Power BI dashboard created to analyze a bank term deposit subscription dataset. The dashboard contains measures and column charts that answer specific questions related to the dataset.
+This documentation provides an overview of two Power BI dashboard created to analyze a bank term deposit subscription dataset. The dashboard contains measures and charts that answer specific questions related to the dataset.
 ## Data Source
 The data source used for this analysis is the bank term deposit subscription dataset, which includes various columns such as age, marital status, education, default status, loan status, duration, and more.
 
@@ -8,13 +8,19 @@ The data source used for this analysis is the bank term deposit subscription dat
 ![](https://github.com/AnietieJohnson/Bank-Term-Deposit-Subscription-Analysis/blob/main/Task%203.png)
 ## Measures
 ### 1. Average Age of Depositors
-This measure calculates the average age of customers who have subscribed to a term deposit.
+This measure calculates the average age of customers who have subscribed to a term deposit, Using the aggregate function **Average**
+> Average age of Depositors = AVERAGE('bank-full'[Age]) 
 ### 2. Count of Subscribers
-This measure counts the number of customers who have subscribed to a term deposit.
+This measure counts the number of customers who have subscribed to a term deposit, Using the aggregate function **Count**
+> Count of Depositors on Loan = CALCULATE(COUNT('bank-full'[Loan]), FILTER('bank-full','bank-full'[Loan] = "Yes"))
 ### 3. Count of Depositors on Loan
-This measure counts the number of customers who have loans.
+This measure counts the number of customers who have loans, Using the aggregate function **Count**
+> Count of Subscribers = CALCULATE(COUNT('bank-full'[Y]), FILTER('bank-full','bank-full'[Y] ="Yes"))
 ### 4. Average Duration
-This measure calculates the average duration of interactions with customers during the marketing campaign.
+This measure calculates the average duration of interactions with customers during the marketing campaign,  Using the aggregate function **Average**
+> Average Duration = AVERAGE('bank-full'[Duration])
+### 5. Guage For Number of Subscribers
+This visuals keeps check of increase in subscribers. A target is set to guide the measurement.
 ## Column Charts
 ### 1. Count of Subscribers by Marital Status
 This column chart visualizes the count of subscribers categorized by their marital status. It helps in understanding how subscription rates vary among different marital statuses.
@@ -27,7 +33,8 @@ This column chart displays the count of subscribers based on their default statu
 ![](https://github.com/AnietieJohnson/Bank-Term-Deposit-Subscription-Analysis/blob/main/Task%204.png)
 ## Measures and New Column Creation
 ### 1. Measure: Average Age of Depositors
-This measure calculates the average age of customers who have subscribed to a term deposit.
+This measure calculates the average age of customers who have subscribed to a term deposit,  Using the aggregate function **Average**
+> Average age of Depositors = AVERAGE('bank-full'[Age])
 ### 2. New Column: Age Band
 A new column named "Age Band" is created based on the age of depositors, categorizing them as follows:
 'Young' for ages below 30
