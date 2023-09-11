@@ -3,8 +3,8 @@
 This documentation provides an overview of a Power BI dashboard created to analyze a bank term deposit subscription dataset. The dashboard contains measures and column charts that answer specific questions related to the dataset.
 ## Data Source
 The data source used for this analysis is the bank term deposit subscription dataset, which includes various columns such as age, marital status, education, default status, loan status, duration, and more.
-# TASK 1
-## Dashboard Contents
+
+## Dashboard Contents 1
 ![](https://github.com/AnietieJohnson/Bank-Term-Deposit-Subscription-Analysis/blob/main/Task%203.png)
 ## Measures
 ### 1. Average Age of Depositors
@@ -23,8 +23,7 @@ This column chart visualizes the count of subscribers categorized by their educa
 ### 3. Count of Subscribers by Default and Loan
 This column chart displays the count of subscribers based on their default status and loan status. It helps in identifying whether subscribers tend to have previous defaults or loans.
 
-# TASK 2
-## Dashboard Content
+## Dashboard Content 2
 ![](https://github.com/AnietieJohnson/Bank-Term-Deposit-Subscription-Analysis/blob/main/Task%204.png)
 ## Measures and New Column Creation
 ### 1. Measure: Average Age of Depositors
