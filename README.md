@@ -5,7 +5,7 @@ This documentation provides an overview of two Power BI dashboard created to ana
 The data source used for this analysis is the bank term deposit subscription dataset, which includes various columns such as age, marital status, education, default status, loan status, duration, and more.
 
 ## Dashboard Contents 1
-![](https://github.com/AnietieJohnson/Bank-Term-Deposit-Subscription-Analysis/blob/main/Task%203.png)
+![]()
 ## Measures
 ### 1. Average Age of Depositors
 This measure calculates the average age of customers who have subscribed to a term deposit, Using the aggregate function **Average**
@@ -20,7 +20,7 @@ This measure counts the number of customers who have loans, Using the aggregate 
 This measure calculates the average duration of interactions with customers during the marketing campaign,  Using the aggregate function **Average**
 > Average Duration = AVERAGE('bank-full'[Duration])
 ### 5. Guage For Number of Subscribers
-This visuals keeps check of increase in subscribers. A target is set to guide the measurement.
+This visuals keeps track of increase in the number term deposit subscribers. A target is set to guide the measurement.
 ## Column Charts
 ### 1. Count of Subscribers by Marital Status
 This column chart visualizes the count of subscribers categorized by their marital status. It helps in understanding how subscription rates vary among different marital statuses.
