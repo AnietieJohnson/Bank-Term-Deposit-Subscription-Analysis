@@ -10,13 +10,13 @@ The data source used for this analysis is the bank term deposit subscription dat
 ### 1. Average Age of Depositors
 This measure calculates the average age of customers who have subscribed to a term deposit, Using the aggregate function **Average**
 > Average age of Depositors = AVERAGE('bank-full'[Age]) 
-### 2. Count of Subscribers
+### 2. Total Count of Term Deposit Subscribers
 This measure counts the number of customers who have subscribed to a term deposit, Using the aggregate function **Count**
 > Count of Depositors on Loan = CALCULATE(COUNT('bank-full'[Loan]), FILTER('bank-full','bank-full'[Loan] = "Yes"))
 ### 3. Count of Depositors on Loan
 This measure counts the number of customers who have loans, Using the aggregate function **Count**
 > Count of Subscribers = CALCULATE(COUNT('bank-full'[Y]), FILTER('bank-full','bank-full'[Y] ="Yes"))
-### 4. Average Duration
+### 4. Average Duration Of Customer Interaction
 This measure calculates the average duration of interactions with customers during the marketing campaign,  Using the aggregate function **Average**
 > Average Duration = AVERAGE('bank-full'[Duration])
 ### 5. Guage For Number of Subscribers
